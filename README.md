@@ -1,5 +1,5 @@
 # Desafio_PicPay
-Esse repositorio tem ocmo intuito utilizar o desafio PICPay back End para rpimorar os meus estudo.
+Este repositório tem como objetivo utilizar o desafio do Back-End do PICPay como uma ferramenta para aprimorar meus estudos e habilidades.
 
 # Objetivo: PicPay Simplificado
 Temos 2 tipos de usuários, os comuns e os lojistas, ambos têm carteira com dinheiro e realizam transferências entre eles. Vamos nos atentar somente ao fluxo de transferência entre dois usuários.
