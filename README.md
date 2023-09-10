@@ -22,13 +22,4 @@ Na coleta de pagamento, o usuário ou lojista precisa receber notificação (env
 
 Este serviço deve ser RESTFul.
 
-# Carga útil
-Faça uma proposta ❤️ de payload, se preferir, temos um exemplo aqui:
 
-POST/transação
-
-{
-    "value" : 100.00,
-    "payer" : 4,
-    "payee" : 15
-}
