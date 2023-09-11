@@ -34,12 +34,12 @@ public class TransactionService {
 
         userService.ValidateTransaction(sender, transaction.value());
 
-        boolean isAuthorized = this.autowireTransaction(sender, transaction.value());
-        if (isAuthorized){
-            throw new Exception("Transação não autorizada");
-        }
+//        boolean isAuthorized = this.autowireTransaction(sender, transaction.value());
+//        if (isAuthorized) {
+//            throw new Exception("Transação não autorizada");
+//        }
 
-        Transaction newtransaction = new Transaction();
+    Transaction newtransaction = new Transaction();
         newtransaction.setAmount(transaction.value());
         newtransaction.setSender(sender);
         newtransaction.setReceiver(receiver);
@@ -62,8 +62,8 @@ public class TransactionService {
        ResponseEntity<Map> authorizationResponse = restTemplate.getForEntity("https://run.mocky.io/v3/8fafdd68-a090-496f-8c9a-3442cf30dae6",Map.class);
 
        if (authorizationResponse.getStatusCode() == HttpStatus.OK){
-               String massage = (String) authorizationResponse.getBody().get("message");
-               return ("Autorizado".equalsIgnoreCase(massage));
+               String message = (String) authorizationResponse.getBody().get("message");
+               return ("Autorizado".equalsIgnoreCase(message));
            }else return false;
         }
 

@@ -14,9 +14,9 @@ public class NotificationService {
     @Autowired
     public RestTemplate restTemplate;
 
-    public void sendNotification(User user, String massage) throws  Exception{
+    public void sendNotification(User user, String message) throws  Exception{
         String email = user.getEmail();
-        NotificationDTO notificationRequest = new NotificationDTO(email, massage);
+        NotificationDTO notificationRequest = new NotificationDTO(email, message);
 
 //        ResponseEntity<String> notificationResponse = restTemplate.postForEntity("http://o4d9z.mocklab.io/notify", notificationRequest, String.class);
 //
@@ -25,7 +25,6 @@ public class NotificationService {
 //            throw  new Exception("Serviço de notificação esta fora do ar");
 //
 //        }
-
-        System.out.println("Notificação enviada ao usuario.");
+        System.out.println("Notificação enviada");
     }
 }

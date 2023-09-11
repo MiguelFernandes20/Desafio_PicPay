@@ -38,9 +38,14 @@ public class UserService {
     }
 
     public List<User> getAllUser(){
+
         return this.repository.findAll();
     }
     public void saveuser(User user){
+
         this.repository.save(user);
+    }
+
+    public void validateTransaction(User sender, BigDecimal value) {
     }
 }
